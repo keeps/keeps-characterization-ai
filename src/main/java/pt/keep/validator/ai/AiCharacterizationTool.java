@@ -1,4 +1,4 @@
-package pt.keep.validator;
+package pt.keep.validator.ai;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -19,8 +19,8 @@ import org.apache.commons.cli.GnuParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 
-import pt.keep.validator.results.Result;
-import pt.keep.validator.utils.CommandLine;
+import pt.keep.validator.ai.results.Result;
+import pt.keep.validator.ai.utils.CommandLine;
 
 public class AiCharacterizationTool 
 {
@@ -62,7 +62,7 @@ public class AiCharacterizationTool
 				
 				Map<String,String> properties = extractMetadata(identifyOutput);
 				
-				if(properties.containsKey("Format") && properties.get("Format").equalsIgnoreCase("PDF (Portable Document Format)")){
+				if(properties.containsKey("Format") && (properties.get("Format").equalsIgnoreCase("PDF (Portable Document Format)") || properties.get("Format").equalsIgnoreCase("PS (PostScript)"))){
 					res.setValid(true);
 				}
 				
@@ -125,7 +125,7 @@ public class AiCharacterizationTool
 				}
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return metadata;
 	}
@@ -178,7 +178,7 @@ public class AiCharacterizationTool
 				System.out.println(res);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 		

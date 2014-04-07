@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with FITS.  If not, see <http://www.gnu.org/licenses/>.
  */
-package pt.keep.validator.utils;
+package pt.keep.validator.ai.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

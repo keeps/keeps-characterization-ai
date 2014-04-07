@@ -1,4 +1,4 @@
-package pt.keep.validator.results;
+package pt.keep.validator.ai.results;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-import pt.keep.validator.utils.jaxb.MapAdapter;
+import pt.keep.validator.ai.utils.jaxb.MapAdapter;
 
 @XmlRootElement(name = "aiCharacterizationResult")
 public class Result {
